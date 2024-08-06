@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Hanleysans";
+    src: url(./assests/Hanley-Pro-db20f709.otf);
+}
+@font-face {
+    font-family: "TabernaSans";
+    src: url(./assests/TabernaSans-Bold-6c2340c9.otf);
+}
+@font-face {
+    font-family: "TabernaSans-Regular";
+    src: url(./assests/TabernaSans-Regular-33885810.otf);
+}
+@font-face {
+    font-family: "Rocomamas-header";
+    src: url(./assests/rocomamas-header.CsH8ZrXg.ttf);
+}
+.TabernaSans{
+    font-family: "TabernaSans";
+}
+.TabernaSans-Regular{
+    font-family: "TabernaSans-Regular";
+}
+.Hanleysans{
+    font-family: "Hanleysans";
+}
+.Rocomamas-header{
+    font-family: "Rocomamas-header";
+}
+* {
+    font-family: "Alrimo";
+    scroll-behavior: smooth;
+    outline: none;
+    padding: 0;
+}
+#menu-container  *{
+    font-family: "Hanleysans";
+}
