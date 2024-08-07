@@ -35,6 +35,9 @@
     scroll-behavior: smooth;
     outline: none;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
 }
 #menu-container  *{
     font-family: "Hanleysans";

@@ -53,17 +53,17 @@ const Home: React.FC = () => {
     dot: false,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     autoplay: true,
-    speed: 4500,
-    autoplaySpeed: 4500,
+    speed: 4500 * 4,
+    autoplaySpeed: 1500,
     cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
+          slidesToScroll: 4,
           infinite: true
         },
       },
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
         breakpoint: 769,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           initialSlide: 2,
         },
       },
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
     ],
@@ -88,17 +88,17 @@ const Home: React.FC = () => {
     dot: false,
     infinite: true,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     autoplay: true,
-    speed: 2800,
-    autoplaySpeed: 2800,
+    speed: 2800 * 4,
+    autoplaySpeed: 1500,
     cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           infinite: true
         },
       },
@@ -106,7 +106,7 @@ const Home: React.FC = () => {
         breakpoint: 640,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           initialSlide: 2,
         },
       },
@@ -114,7 +114,7 @@ const Home: React.FC = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
     ],
@@ -142,7 +142,7 @@ const Home: React.FC = () => {
    
     <Box position={"relative"} top={"-50px"} zIndex={"-1"}>
     <Slider {...settings2}>
-          {["Explosive ","Burgers ", " Fire ","Wings ", " Juicy ","Hotdogs", "Frozen "," Cocktails"].map((item, i)=>(
+          {["Explosive ","Burgers ", " Fire ","Wings ", " Juicy ","Hotdogs", "Frozen "," Cocktails "].map((item, i)=>(
             <Text textAlign={"center"} opacity={".3"} key={i} fontSize={isSmallerThan1024 ? "3.75rem" : "6rem"} color={"white"} className='Rocomamas-header'>{item}</Text>
           ))}
     </Slider>
