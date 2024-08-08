@@ -12,7 +12,6 @@ import {
 import React, { useEffect, useState } from "react";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { FaXmark } from "react-icons/fa6";
-import NavSlider from "./NavSlider";
 import Link from "next/link";
 
 // Use props interface in functional component
@@ -381,7 +380,7 @@ const toppingMenu: ToppingMenu = [
       justifyContent={"center"}
       alignItems={"center"}
       >
-     <Button bg={"rgb(200, 36, 56)"} _hover={{bg: "#9b2c2c"}} color={"white"} className="TabernaSans-Regular" padding={"21px 5rem"} fontSize={"1.25rem"} lineHeight={"1.75rem"}>View Menu</Button>
+     <Button border={"none"} bg={"rgb(200, 36, 56)"} _hover={{bg: "#9b2c2c"}} color={"white"} className="TabernaSans-Regular" padding={"21px 5rem"} fontSize={"1.25rem"} lineHeight={"1.75rem"}>View Menu</Button>
       </Box>
 
 
