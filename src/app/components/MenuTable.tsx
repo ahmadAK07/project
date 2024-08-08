@@ -42,67 +42,156 @@ export default function MenuTable() {
   type FullMenu = MenuCategory[];
 
   const fullMenu1: FullMenu = [
-  {
-    title: "smash burgers",
-    items: [
-      { name: "Hamburger", price: 85 , isExtra: false},
-      { name: "Cheeseburger", price: 95 , isExtra: false},
-      { name: "Bacon Burger", price: 105 , isExtra: false},
-      { name: "Bacon Cheeseburger", price: 115 , isExtra: false},
-      { name: "Double Hamburger", price: 105 , isExtra: false},
-      { name: "Double Cheeseburger", price: 120 , isExtra: false},
-      { name: "Double Bacon Burger", price: 130 , isExtra: false},
-      { name: "Double Bacon Cheeseburger", price: 140 , isExtra: false},
-      { name: "Add an Egg", price: 8 , isExtra: true},
-    ],
-  },
-  {
-    title: "Sandwiches",
-    items: [
-      { name: "Veggie Sandwich", price: 70  , isExtra: false},
-      { name: "Cheese Sandwich", price: 70  , isExtra: false},
-      { name: "Grilled Cheese", price: 70  , isExtra: false},
-      { name: "Bacon Grilled Cheese", price: 80  , isExtra: false},
-      { name: "Bacon Egg Cheese", price: 80  , isExtra: false},
-      { name: "Add an Egg", price: 8  , isExtra: true},
-    ],
-  },
-  {
-    title: "Hot dogs",
-    items: [
-      { name: "Hot Dog", price: 80  , isExtra: false},
-      { name: "Cheese Dog", price: 80  , isExtra: false},
-      { name: "Bacon Dog", price: 90  , isExtra: false},
-      { name: "Bacon Cheese Dog", price: 90  , isExtra: false},
-    ],
-  },
- 
-];
-  const fullMenu2: FullMenu = [
     {
-        title: "Drinks",
-        items: [
-          { name: "Water", price: [5, 10] , isExtra: false},
-          { name: "Sodas & Juices", price: [15, 30]  , isExtra: false},
-          { name: "Bottled Beer", price: [20, 30]  , isExtra: false},
-        ],
-      },
-      {
-        title: "Fries",
-        items: [
-          { name: "BYO2 Style or Spicy Cajun Style", price: 0  , isExtra: true},
-          { name: "Little Fries", price: 30  , isExtra: false},
-          { name: "Large Fries", price: 40  , isExtra: false},
-        ],
-      },
-      {
-        title: "the 80/20 combo meal",
-        items: [
-          { name: "Choose any 1 Burger, Sandwich, Hot Dog and Fries", price: 0 , isExtra: true},
-          { name: "Get a Free Drink", price: 0 , isExtra: false},
-        ],
-      }
+      title: "WINGS",
+      items: [
+        { name: "HONEY GLAZED", price: 85, isExtra: false },
+        { name: "SWEET CHILLI", price: 95, isExtra: false },
+        { name: "SMOKEY BBQ", price: 105, isExtra: false },
+        { name: "SUICIDE", price: 115, isExtra: false },
+        { name: "ABOKYIE STYLE", price: 105, isExtra: false },
+      ],
+    },
+    {
+      title: "MEAL DEALS",
+      items: [
+        { name: "WING IT COMBO", price: 85, isExtra: false },
+        { name: "BURGER COMBO", price: 100, isExtra: false },
+        { name: "HOTDOG(PORK) COMBO", price: 90, isExtra: false },
+      ],
+    },
+    {
+      title: "BURGERS",
+      items: [
+        { name: "BEEF BURGER", price: 65, isExtra: false },
+        { name: "CHEESEBURGER", price: 75, isExtra: false },
+        { name: "MINI CHEESEBURGER", price: 45, isExtra: false },
+        { name: "BACON(PORK) CHEESEBURGER", price: 100, isExtra: false },
+        { name: "MINI BACON(PORK) CHEESEBURGER", price: 55, isExtra: false },
+        { name: "DOUBLE CHEESEBURGER", price: 110, isExtra: false },
+        { name: "BBQ CHEESEBURGER", price: 80, isExtra: false },
+        { name: "MINI BBQ CHEESEBURGER", price: 45, isExtra: false },
+        { name: "SPICY CHEESEBURGER", price: 80, isExtra: false },
+        { name: "MINI SPICY CHEESEBURGER", price: 45, isExtra: false },
+        { name: "MINI TRIO", price: 135, isExtra: false },
+        { name: "CHILLI SAUCE", price: 3, isExtra: true },
+        { name: "BBQ SAUCE", price: 5, isExtra: true },
+        { name: "BURGER SAUCE", price: 10, isExtra: true },
+        { name: "JALAPENOS", price: 5, isExtra: true },
+        { name: "BACON(PORK)", price: 25, isExtra: true },
+        { name: "CHEESE", price: 10, isExtra: true },
+        { name: "EGG", price: 10, isExtra: true },
+        { name: "EXTRA PATTY WITH CHEESE", price: 35, isExtra: true },
+        { name: "EXTRA PATTY", price: 25, isExtra: true },
+
+      ],
+    },
+
+  ];
+
+//   const fullMenu1: FullMenu = [
+//   {
+//     title: "smash burgers",
+//     items: [
+//       { name: "Hamburger", price: 85 , isExtra: false},
+//       { name: "Cheeseburger", price: 95 , isExtra: false},
+//       { name: "Bacon Burger", price: 105 , isExtra: false},
+//       { name: "Bacon Cheeseburger", price: 115 , isExtra: false},
+//       { name: "Double Hamburger", price: 105 , isExtra: false},
+//       { name: "Double Cheeseburger", price: 120 , isExtra: false},
+//       { name: "Double Bacon Burger", price: 130 , isExtra: false},
+//       { name: "Double Bacon Cheeseburger", price: 140 , isExtra: false},
+//       { name: "Add an Egg", price: 8 , isExtra: true},
+//     ],
+//   },
+//   {
+//     title: "Sandwiches",
+//     items: [
+//       { name: "Veggie Sandwich", price: 70  , isExtra: false},
+//       { name: "Cheese Sandwich", price: 70  , isExtra: false},
+//       { name: "Grilled Cheese", price: 70  , isExtra: false},
+//       { name: "Bacon Grilled Cheese", price: 80  , isExtra: false},
+//       { name: "Bacon Egg Cheese", price: 80  , isExtra: false},
+//       { name: "Add an Egg", price: 8  , isExtra: true},
+//     ],
+//   },
+//   {
+//     title: "Hot dogs",
+//     items: [
+//       { name: "Hot Dog", price: 80  , isExtra: false},
+//       { name: "Cheese Dog", price: 80  , isExtra: false},
+//       { name: "Bacon Dog", price: 90  , isExtra: false},
+//       { name: "Bacon Cheese Dog", price: 90  , isExtra: false},
+//     ],
+//   },
  
+// ];
+
+//   const fullMenu2: FullMenu = [
+//     {
+//         title: "Drinks",
+//         items: [
+//           { name: "Water", price: [5, 10] , isExtra: false},
+//           { name: "Sodas & Juices", price: [15, 30]  , isExtra: false},
+//           { name: "Bottled Beer", price: [20, 30]  , isExtra: false},
+//         ],
+//       },
+//       {
+//         title: "Fries",
+//         items: [
+//           { name: "BYO2 Style or Spicy Cajun Style", price: 0  , isExtra: true},
+//           { name: "Little Fries", price: 30  , isExtra: false},
+//           { name: "Large Fries", price: 40  , isExtra: false},
+//         ],
+//       },
+//       {
+//         title: "the 80/20 combo meal",
+//         items: [
+//           { name: "Choose any 1 Burger, Sandwich, Hot Dog and Fries", price: 0 , isExtra: true},
+//           { name: "Get a Free Drink", price: 0 , isExtra: false},
+//         ],
+//       }
+ 
+// ];
+
+const fullMenu2: FullMenu = [
+  {
+    title: "HOTDOGS (PORK)",
+    items: [
+      { name: "SINGLE HOTDOG(PORK)", price: 65, isExtra: false },
+      { name: "DOUBLE HOTDOG(PORK)", price: 125, isExtra: false },
+      { name: "SAUSAGE BITES(PORK)", price: 80, isExtra: false },
+      { name: "BBQ SAUCE", price: 0, isExtra: true },
+      { name: "MUSTARD", price: 0, isExtra: true },
+      { name: "CHILLI", price: 0, isExtra: true },
+      { name: "CHILLI SAUCE", price: 3, isExtra: true },
+      { name: "BBQ SAUCE", price: 5, isExtra: true },
+      { name: "BURGER SAUCE", price: 10, isExtra: true },
+      { name: "JALAPENOS", price: 5, isExtra: true },
+      { name: "BACON(PORK)", price: 25, isExtra: true },
+      { name: "CHEESE", price: 10, isExtra: true },
+      { name: "KETCHUP", price: 3, isExtra: true },
+
+    ],
+  },
+  {
+    title: "WINGMAN COCKTAIL MENU",
+    items: [
+      { name: "ALCOHOLIC", price: 65, isExtra: false },
+      { name: "NON ALCOHOLIC", price: 45, isExtra: false },
+      { name: "SOFT DRINKS", price: 10, isExtra: false },
+      { name: "WATER", price: 5, isExtra: false },
+
+    ],
+  },
+  {
+    title: "SIDES",
+    items: [
+      { name: "YAM CHIPS", price: 25, isExtra: false },
+      { name: "FRESH CUT POTATO CHIPS", price: 35, isExtra: false },
+      { name: "SWEET POTATO FRIES", price: 55, isExtra: false },
+    ],
+  }
 ];
 
 type ToppingColumn = {
@@ -174,7 +263,6 @@ const toppingMenu: ToppingMenu = [
           flexDirection={isSmallerThan769 ? "column" : "row"}
           gap={"2rem"}
           justifyContent={"center"}
-          alignItems={"center"}
           w={"100%"}
           padding={"0px 1rem"}
           fontSize={"1.125rem"}
@@ -188,7 +276,7 @@ const toppingMenu: ToppingMenu = [
               padding={"1.25rem"}
               border={"4px solid  black"}
               width={"315px"}
-              height={isSmallerThan769 ? "auto" : "630px"}
+              height={"auto"}
             >
               <Text
                 paddingBottom={".5rem"}
@@ -253,7 +341,7 @@ const toppingMenu: ToppingMenu = [
           gap={"2rem"}
           flexWrap={"wrap"}
           justifyContent={"center"}
-          alignItems={"center"}
+          // alignItems={"center"}
           w={"100%"}
           padding={"0px 1rem"}
           fontSize={"1.125rem"}
@@ -267,7 +355,7 @@ const toppingMenu: ToppingMenu = [
               padding={"1.25rem"}
               border={"4px solid  black"}
               width={"315px"}
-              height={isSmallerThan769 ? "auto" : "630px"}
+              height={"auto"}
             >
               <Text
                 paddingBottom={".5rem"}
@@ -311,7 +399,7 @@ const toppingMenu: ToppingMenu = [
           ))}
         </Box>
       </Box>
-      <Box 
+      {/* <Box 
       padding={"5rem 1rem 0rem"}
       maxW={isSmallerThan1024 ? "407px" : "1024px"}
       width={"100%"}
@@ -372,7 +460,7 @@ const toppingMenu: ToppingMenu = [
               </Box>
       </Box>
        </Box>
-      </Box>
+      </Box> */}
 
       <Box
       padding={"1.25rem"}
