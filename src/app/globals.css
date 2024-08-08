@@ -42,3 +42,41 @@
 #menu-container  *{
     font-family: "Hanleysans";
 }
+
+.ticker-container {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .ticker-wrapper {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .ticker-images {
+    display: inline-block;
+    animation: ticker 35s linear infinite;
+  }
+  .ticker-text {
+    display: inline-block;
+    animation: ticker 10s linear infinite;
+  }
+
+.ticker-text span{
+    margin: 0px 15px;
+}
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @media screen and (max-width: 769px) {
+    .ticker-text span{
+        margin: 0px 7px;
+    }
+  }

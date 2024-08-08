@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const Home: React.FC = () => {
 
-  
   const [isNavSticky, setIsNavSticky] = useState(false);
   
 
@@ -103,7 +102,7 @@ const Home: React.FC = () => {
     draggable: false,
     arrows: false,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 4,
     autoplay: true,
     speed: 2800 * 4,
@@ -111,25 +110,47 @@ const Home: React.FC = () => {
     cssEase: "linear",
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 5,
           slidesToScroll: 3,
           infinite: true
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 1400,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 4,
+          slidesToScroll: 3,
+          infinite: true
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
           slidesToScroll: 3,
           initialSlide: 2,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 769,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 4,
           slidesToScroll: 2,
         },
       },
@@ -151,26 +172,67 @@ const Home: React.FC = () => {
     backgroundPosition={"top"} backgroundSize={"cover"}
     opacity={.8}></Box>
 <Box transform={"rotate(-3deg)"} transformOrigin={"center"} ml={"-20px"}  width={"105vw"}>
-     <Slider {...settings1} className='custom-slider'>
+     {/* <Slider {...settings1} className='custom-slider'>
            {imgLinkks && imgLinkks.map((url, i)=>(
             <Box  display={"flex"} key={i} justifyContent={"center"} alignItems={"center"} maxW={isSmallerThan1024 ? "250px" : "400px"} w={isSmallerThan1024 ? "250px" : "400px"} >
               <Image transform={"rotate(3deg)"} src={url} h={isSmallerThan1024 ? "90%" : "100%"} maxW={isSmallerThan1024 ? "90%" : "100%"} objectFit={"cover"} objectPosition={"center"}></Image>
                </Box>
            ))}
-    </Slider>
+    </Slider> */}
    
-    <Box position={"relative"} top={ isSmallerThan769 ? "-30px" : "-40px"} zIndex={"-1"}>
-    <Slider {...settings2}>
+    <Box 
+    className='ticker-container'
+    >
+      <Box className="ticker-wrapper" display={"flex"}>
+        <Box className='ticker-images'  display={"flex"} gap={"20px"}>
+        {imgLinkks && imgLinkks.map((url, i)=>(
+            <Box   display={"flex"} key={i} justifyContent={"center"} alignItems={"center"} minW={isSmallerThan1024 ? "250px" : "400px"} w={isSmallerThan1024 ? "250px" : "400px"} >
+              <Image transform={"rotate(3deg)"} src={url} h={isSmallerThan1024 ? "90%" : "100%"} maxW={isSmallerThan1024 ? "90%" : "100%"} objectFit={"cover"} objectPosition={"center"}></Image>
+               </Box>
+           ))}
+            {imgLinkks && imgLinkks.map((url, i)=>(
+            <Box   display={"flex"} key={i} justifyContent={"center"} alignItems={"center"} minW={isSmallerThan1024 ? "250px" : "400px"} w={isSmallerThan1024 ? "250px" : "400px"} >
+              <Image transform={"rotate(3deg)"} src={url} h={isSmallerThan1024 ? "90%" : "100%"} maxW={isSmallerThan1024 ? "90%" : "100%"} objectFit={"cover"} objectPosition={"center"}></Image>
+               </Box>
+           ))}
+        </Box>
+
+
+     
+      </Box>
+
+    </Box>
+
+    <Box position={"relative"} top={ isSmallerThan769 ? "-30px" : "-50px"} zIndex={"-1"}>
+      <Box 
+      className='ticker-container'
+      >
+          <Box
+          color={"white"} className='ticker-wrapper'>
+          
+          <Text   whiteSpace={"nowrap"}  opacity={".3"}  fontSize={isSmallerThan640 ? "1.9rem" : isSmallerThan769 ? "2.5rem" : isSmallerThan1024 ? "3.75rem" : "6rem"} color={"white"} className='Rocomamas-header ticker-text'>
+          {["Explosive "," Burgers","Fire","Wings","Juicy","Hotdog","Frozen","Cocktail"].map((word, i)=>(
+            <span className='Rocomamas-header' key={i}>{word}</span>
+           ))}
+              </Text>
+          <Text   whiteSpace={"nowrap"}  opacity={".3"}  fontSize={isSmallerThan640 ? "1.9rem" : isSmallerThan769 ? "2.5rem" : isSmallerThan1024 ? "3.75rem" : "6rem"} color={"white"} className='Rocomamas-header ticker-text'>
+           {["Explosive "," Burgers","Fire","Wings","Juicy","Hotdog","Frozen","Cocktail"].map((word, i)=>(
+            <span className='Rocomamas-header' key={i}>{word}</span>
+           ))}
+              </Text>
+          </Box>
+      </Box>
+    {/* <Slider {...settings2}>
           {["Explosive "," Burgers","Fire","Wings","Juicy","Hotdog","Frozen","Cocktail"].map((item, i)=>(
-             <Box  minW={"100%"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
+             <Box  display={"flex"} justifyContent={"center"} alignItems={"center"}>
                             
-                             <Text  opacity={".3"} key={i} fontSize={isSmallerThan769 ? "3rem" : isSmallerThan1024 ? "3.75rem" : "6rem"} color={"white"} className='Rocomamas-header'>
+                             <Text  opacity={".3"} key={i} fontSize={isSmallerThan640 ? "1.9rem" : isSmallerThan769 ? "2.5rem" : isSmallerThan1024 ? "3.75rem" : "5rem"} color={"white"} className='Rocomamas-header'>
               {item}
               </Text>
                            
              </Box>
           ))}
-    </Slider>
+    </Slider> */}
     </Box>
     </Box>
     <Box display={isSmallerThan1024 ? "none" : "block"} w={"55vw"} h={"100%"} top={"0"} right={0} position={"absolute"} zIndex={10}  background={" linear-gradient(270deg, rgba(24,24,24,1) 5% ,rgba(121,29,9,0) 50%)"}
