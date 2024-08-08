@@ -3,7 +3,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Box, Text, Button, useMediaQuery, Image } from "@chakra-ui/react";
 import MenuTable from "./components/MenuTable";
-import Navbar from "./components/Navbar";
 const Home: React.FC = () => {
   const [isNavSticky, setIsNavSticky] = useState(false);
 
@@ -30,9 +29,9 @@ const Home: React.FC = () => {
 
   return (
     <Box overflow={"hidden"} position={"relative"} minH={"1000px"}>
-      <Navbar />
+    
       <Box
-        my={"80px"}
+        mb={"80px"}
         py={"100px"}
         background={
           " linear-gradient(180deg, rgba(24, 24, 24, .8) 80%, transparent),url('https://rocomamas.com/img/home/tiles.webp')"
